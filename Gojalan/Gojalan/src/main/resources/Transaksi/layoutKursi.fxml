@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="697.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transaksi.PembelianTiket.layoutKursiController">
+   <children>
+      <Label fx:id="lblKonfirmasi" layoutX="540.0" layoutY="342.0" onMouseClicked="#onKonfirmasi" onMouseEntered="#konfirmasiEntered" onMouseExited="#konfirmasiExited" text="Konfirmasi">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <VBox layoutX="119.0" layoutY="112.0" prefHeight="437.0" prefWidth="242.0" style="-fx-border-color: grey;">
+         <children>
+            <ImageView fx:id="imageLayout" fitHeight="434.0" fitWidth="329.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/layoutKursi.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="83.0" prefHeight="24.0" prefWidth="277.0" style="-fx-border-color: black;" text="Depan (Supir) " />
+      <ComboBox fx:id="cbKursiA" layoutX="413.0" layoutY="251.0" prefHeight="42.0" prefWidth="116.0" promptText="Pilih Kursi A" />
+      <Label layoutX="85.0" text="Layout Kursi">
+         <font>
+            <Font name="System Bold" size="56.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbKursiB" layoutX="542.0" layoutY="251.0" prefHeight="42.0" prefWidth="116.0" promptText="Pilih Kursi B" />
+      <Label fx:id="lblTambah" layoutX="429.0" layoutY="342.0" onMouseClicked="#onTambahKursi" onMouseEntered="#tambahEntered" onMouseExited="#tambahExited" text="Tambah">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelKursi" alignment="CENTER" layoutX="429.0" layoutY="308.0" prefHeight="24.0" prefWidth="214.0" style="-fx-border-color: black;" />
+      <Button fx:id="btnBatal" layoutX="641.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBatalClick" prefHeight="32.0" prefWidth="34.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-border-color: black; -fx-background-radius: 15;" styleClass="fancy-button" stylesheets="@../style/Style.css" text="X">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

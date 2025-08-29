@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="949.0" prefWidth="1578.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Master.Bus.busCRUDController">
+   <children>
+      <VBox layoutX="1246.0" layoutY="84.0" prefHeight="786.0" prefWidth="342.0" />
+      <TableView fx:id="tblSetting" layoutX="34.0" layoutY="108.0" prefHeight="768.0" prefWidth="1201.0" stylesheets="@../../../../style/Style.css">
+         <columns>
+            <TableColumn fx:id="clmNo" minWidth="0.0" prefWidth="125.0" text="No" />
+            <TableColumn fx:id="clmID" minWidth="0.0" prefWidth="0.0" text="ID" visible="false" />
+            <TableColumn fx:id="clmJenisBus" minWidth="0.0" prefWidth="297.0" text="Jenis Bus" />
+            <TableColumn fx:id="clmNoPolisi" prefWidth="439.0" text="No Polisi" />
+            <TableColumn fx:id="clmKapasitas" minWidth="0.0" prefWidth="209.0" text="Kapasitas" />
+            <TableColumn fx:id="clmAksi" minWidth="0.0" prefWidth="109.0" text="Aksi" />
+         </columns>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="2.0" prefHeight="113.0" prefWidth="1268.0" spacing="15.0" styleClass="filter-section">
+         <children>
+            <Label prefHeight="32.0" prefWidth="61.0" text="Cari :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textCari" prefHeight="44.0" prefWidth="1020.0" promptText="Search by name or value">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Pane fx:id="paneCari" prefHeight="65.0" prefWidth="40.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0" layoutX="-2.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Images/image.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" prefHeight="50.0" prefWidth="57.0" text="🔁">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Pane layoutX="1260.0" layoutY="1.0" prefHeight="948.0" prefWidth="341.0" style="-fx-background-color: #2240E6;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="951.0" prefWidth="335.0">
+               <children>
+                  <Button fx:id="btnTambah" layoutX="192.0" layoutY="822.0" mnemonicParsing="false" onAction="#onBtnSimpanClick" onMouseClicked="#onBtnSimpanClick" prefHeight="43.0" prefWidth="130.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-text-fill: #0044e3;" styleClass="fancy-button" stylesheets="@../../../../style/Style.css" text="Simpan" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnClear" layoutX="21.0" layoutY="822.0" mnemonicParsing="false" onAction="#clear" onMouseClicked="#clear" prefHeight="44.0" prefWidth="130.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: #f52727; -fx-text-fill: #ffffff;" text="Batal">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textID" disable="true" editable="false" layoutX="9.0" layoutY="145.0" prefHeight="50.0" prefWidth="316.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 3;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="202.0" prefHeight="32.0" prefWidth="132.0" text="Jenis Bus *" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textKapasitas" layoutX="10.0" layoutY="427.0" prefHeight="50.0" prefWidth="316.0" promptText="2 Digit Angka" style="-fx-background-radius: 15; -fx-border-width: 3; -fx-border-radius: 15;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="389.0" prefHeight="32.0" prefWidth="129.0" text="Kapasitas *" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textNoPolisi" layoutX="10.0" layoutY="327.0" prefHeight="50.0" prefWidth="316.0" promptText="16 Digit Angka * 123" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 3;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="112.0" prefHeight="27.0" prefWidth="89.0" text="ID *" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbJenis" layoutX="10.0" layoutY="234.0" prefHeight="50.0" prefWidth="316.0" promptText="Pilih Jenis Bus" style="-fx-background-color: #ffffff; -fx-border-color: #b0b0b0; -fx-background-radius: 15; -fx-border-radius: 15; -fx-font-size: 17;" />
+                  <Label fx:id="lblValidasi" layoutX="38.0" layoutY="652.0" prefHeight="38.0" prefWidth="294.0" />
+                  <Label layoutX="10.0" layoutY="295.0" prefHeight="32.0" prefWidth="129.0" text="No Polisi *" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

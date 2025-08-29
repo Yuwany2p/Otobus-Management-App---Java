@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1083.0" prefWidth="1882.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gojalan.DashboardAgenController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/DashboardAgen.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="pnlContent" layoutX="351.0" layoutY="151.0" prefHeight="932.0" prefWidth="1578.0" />
+      <Label fx:id="LbTab" layoutX="402.0" layoutY="38.0" text="Halaman Awal">
+         <font>
+            <Font name="Segoe UI Bold" size="32.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pnlKeluar" layoutX="9.0" layoutY="867.0" onMouseClicked="#switchToLogin" onMouseEntered="#keluarEntered" onMouseExited="#keluarExited" prefHeight="85.0" prefWidth="327.0" style="-fx-background-color: #2240E6;" stylesheets="@../../../../style/Style.css">
+         <children>
+            <Label fx:id="lblKeluar" layoutX="117.0" layoutY="21.0" text="Keluar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgKeluar" fitHeight="70.0" fitWidth="70.0" layoutX="28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/keluar.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="pane-hover" />
+            <String fx:value="selected" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="panelHalamanAwal" layoutX="1.0" layoutY="313.0" onMouseClicked="#handleHalamanAwal" prefHeight="85.0" prefWidth="350.0" styleClass="pane-hover" stylesheets="@../../../../style/Style.css">
+         <children>
+            <Label layoutX="110.0" layoutY="26.0" text="Halaman Awal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/halamanAwal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="panelPembelianTiket" layoutX="1.0" layoutY="400.0" onMouseClicked="#handlePembelian" prefHeight="85.0" prefWidth="350.0" styleClass="pane-hover" stylesheets="@../../../../style/Style.css">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/Tiket.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="110.0" layoutY="26.0" text="Pembelian Tiket" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panelPengembalianTiket" layoutX="1.0" layoutY="479.0" onMouseClicked="#handlePengembalian" prefHeight="85.0" prefWidth="350.0" styleClass="pane-hover" stylesheets="@../../../../style/Style.css">
+         <children>
+            <Label layoutX="108.0" layoutY="26.0" text="Pengembalian Tiket" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/Pengembalian.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="panelJadwalBus" layoutX="1.0" layoutY="577.0" onMouseClicked="#handleJadwalBus" prefHeight="85.0" prefWidth="350.0" styleClass="pane-hover" stylesheets="@../../../../style/Style.css">
+         <children>
+            <Label layoutX="109.0" layoutY="25.0" text="Jadwal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="64.0" fitWidth="69.0" layoutX="31.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Images/JadwalBus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="panelPenanda" layoutX="1.0" layoutY="309.0" prefHeight="85.0" prefWidth="16.0" style="-fx-background-color: #9fc5e8;" />
+      <Label fx:id="LbName" alignment="CENTER" layoutX="1608.0" layoutY="37.0" prefHeight="41.0" prefWidth="271.0" text="Guest" wrapText="true">
+         <font>
+            <Font name="Segoe UI Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEdit" layoutX="1642.0" layoutY="82.0" onMouseClicked="#editPassword" onMouseEntered="#entered" onMouseExited="#exited" prefHeight="39.0" prefWidth="150.0" text="Ubah Sandi">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="popupLayer" layoutX="-2.0" layoutY="-2.0" prefHeight="1080.0" prefWidth="1932.0" visible="false">
+         <children>
+            <Pane fx:id="darkOverlay" prefHeight="1084.0" prefWidth="1932.0" style="-fx-background-color: rgba(0, 0, 0, 0.4);" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="949.0" prefWidth="1602.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Master.Setting.settingCRUDController">
+   <children>
+      <TableView fx:id="tblSetting" layoutX="34.0" layoutY="108.0" onMouseClicked="#onTableMouseClicked" prefHeight="768.0" prefWidth="1201.0" style="-fx-border-width: 10; -fx-border-radius: 15;" stylesheets="@../../../../style/Style.css">
+        <columns>
+            <TableColumn fx:id="clmNo" prefWidth="90.0" text="No" />
+            <TableColumn fx:id="clmID" minWidth="0.0" prefWidth="0.0" text="ID" visible="false" />
+          <TableColumn fx:id="clmNama" prefWidth="257.0" text="Nama" />
+            <TableColumn fx:id="clmValue" prefWidth="257.0" text="Value" />
+            <TableColumn fx:id="clmKategori1" prefWidth="232.33331298828125" text="Kategori1" />
+            <TableColumn fx:id="clmKategori2" prefWidth="239.66668701171875" text="Kategori2" />
+            <TableColumn fx:id="clmAksi" prefWidth="104.666748046875" text="Aksi" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="2.0" prefHeight="113.0" prefWidth="1268.0" spacing="15.0" styleClass="filter-section">
+         <children>
+            <Label prefHeight="32.0" prefWidth="61.0" text="Cari :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textCari" prefHeight="44.0" prefWidth="1020.0" promptText="Search by name or value" style="-fx-background-radius: 15;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Pane fx:id="paneCari" prefHeight="65.0" prefWidth="40.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="43.0" layoutX="-2.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Images/image.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" prefHeight="50.0" prefWidth="57.0" text="🔁">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Pane layoutX="1261.0" prefHeight="950.0" prefWidth="341.0" style="-fx-background-color: #2240E6;">
+         <children>
+            <VBox prefHeight="950.0" prefWidth="341.0">
+               <children>
+                  <AnchorPane prefHeight="951.0" prefWidth="341.0">
+                     <children>
+                        <Button fx:id="btnTambah" layoutX="200.0" layoutY="827.0" mnemonicParsing="false" onAction="#onBtnSimpanClick" prefHeight="43.0" prefWidth="123.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-text-fill: #2240E6;" styleClass="fancy-button" stylesheets="@../../../../style/Style.css" text="Simpan" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="13.0" layoutY="104.0" prefHeight="27.0" prefWidth="89.0" text="Nama *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textValue" layoutX="13.0" layoutY="223.0" prefHeight="38.0" prefWidth="314.0" promptText="cth * Agen" style="-fx-background-radius: 15; -fx-border-width: 3; -fx-border-radius: 15;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="13.0" layoutY="192.0" prefHeight="27.0" prefWidth="89.0" text="Value *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="275.0" prefHeight="32.0" prefWidth="132.0" text="Kategori 1 *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="359.0" prefHeight="32.0" prefWidth="132.0" text="Kategori 2 *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblValidasi" alignment="CENTER" layoutX="30.0" layoutY="565.0" prefHeight="38.0" prefWidth="287.0" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="textNama" layoutX="13.0" layoutY="138.0" prefHeight="38.0" prefWidth="314.0" promptText="Pilih Nama" style="-fx-background-radius: 15; -fx-font-size: 17;" />
+                        <DatePicker fx:id="textKategori1" layoutX="13.0" layoutY="309.0" prefHeight="37.0" prefWidth="314.0" promptText="Opsional" style="-fx-font-size: 17;" />
+                        <DatePicker fx:id="textKategori2" layoutX="13.0" layoutY="393.0" prefHeight="37.0" prefWidth="314.0" promptText="Opsional" style="-fx-font-size: 17;" />
+                        <Button fx:id="btnClear" layoutX="29.0" layoutY="827.0" mnemonicParsing="false" onAction="#clear" prefHeight="44.0" prefWidth="123.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: #f52727; -fx-text-fill: #ffffff;" text="Batal">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

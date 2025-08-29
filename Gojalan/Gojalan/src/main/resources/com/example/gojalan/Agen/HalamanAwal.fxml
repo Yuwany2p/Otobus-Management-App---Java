@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="932.0" prefWidth="1591.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanAwal.HalamanAwalAgenControler">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="292.0" layoutX="133.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="577.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="141.0" layoutY="62.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="558.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="292.0" layoutX="545.0" layoutY="421.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="577.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="555.0" layoutY="431.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="558.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="292.0" layoutX="951.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="577.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="960.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="558.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="489.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/Kursi.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="81.0" prefHeight="80.0" prefWidth="297.0" text="Penumpang">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1338.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/Bus.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="996.0" layoutY="76.0" prefHeight="80.0" prefWidth="390.0" text="Keberangkatan">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="931.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/Tiket.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="605.0" layoutY="445.0" prefHeight="80.0" prefWidth="390.0" text="Tiket">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPenumpang" layoutX="176.0" layoutY="149.0" prefHeight="80.0" prefWidth="297.0" text="10">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbKeberangkatan" layoutX="993.0" layoutY="141.0" prefHeight="80.0" prefWidth="297.0" text="10">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbTiket" layoutX="607.0" layoutY="512.0" prefHeight="80.0" prefWidth="297.0" text="10">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

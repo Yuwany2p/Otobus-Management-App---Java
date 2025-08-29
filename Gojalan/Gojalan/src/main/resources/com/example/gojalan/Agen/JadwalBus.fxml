@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="932.0" prefWidth="1578.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Jadwal.JadwalBusController">
+   <children>
+      <Label alignment="CENTER" layoutX="440.0" layoutY="3.0" prefHeight="76.0" prefWidth="719.0" text="Jadwal Bus">
+         <font>
+            <Font name="System Bold" size="51.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="9.0" layoutY="106.0" prefHeight="808.0" prefWidth="1538.0" style="-fx-border-color: black; -fx-border-width: 5;">
+         <children>
+            <ScrollPane layoutX="12.0" layoutY="87.0" prefHeight="722.0" prefWidth="1526.0">
+               <content>
+                  <VBox fx:id="vbJadwal" prefHeight="171.0" prefWidth="1509.0" />
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="85.0" prefWidth="1549.0">
+               <children>
+                  <Region prefHeight="85.0" prefWidth="149.0" />
+                  <Label alignment="CENTER" prefHeight="85.0" prefWidth="294.0" text="Nomor Polisi">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="85.0" prefWidth="534.0" />
+                  <VBox prefHeight="85.0" prefWidth="466.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="481.0" text="Keberangkatan">
+                           <font>
+                              <Font name="System Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="54.0" prefWidth="247.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="39.0" prefWidth="369.0" text="Asal">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="39.0" prefWidth="349.0" text="Tujuan">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

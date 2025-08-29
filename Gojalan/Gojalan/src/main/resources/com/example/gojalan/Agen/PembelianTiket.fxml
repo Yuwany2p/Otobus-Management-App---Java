@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transaksi.PembelianTiket.PembelianTiketController">
+   <children>
+      <AnchorPane fx:id="contentPane" layoutX="2.0" prefHeight="932.0" prefWidth="1570.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="2.0" layoutY="2.0" prefHeight="124.0" prefWidth="1249.0" spacing="15.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #2240E6;" styleClass="filter-section">
+               <children>
+                  <VBox prefHeight="98.0" prefWidth="205.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="43.0" prefWidth="261.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Images/Rutee.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="49.0" prefWidth="85.0" text="DARI" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="cbDari" prefHeight="50.0" prefWidth="300.0" promptText="DARI" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="205.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="39.0" prefWidth="261.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Images/Rutee.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="49.0" prefWidth="65.0" text="KE" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="cbKe" prefHeight="50.0" prefWidth="300.0" promptText="KE" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="98.0" prefWidth="253.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="33.0" prefWidth="262.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Images/Kalender.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="49.0" prefWidth="189.0" text="TANGGAL PERGI" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <DatePicker fx:id="pickPergi" prefHeight="50.0" prefWidth="300.0" promptText="TANGGAL PERGI" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="98.0" prefWidth="265.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="35.0" prefWidth="262.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../Images/Kalender.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="49.0" prefWidth="199.0" text="TANGGAL DATANG" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <DatePicker fx:id="pickDatang" prefHeight="50.0" prefWidth="300.0" promptText="TANGGAL DATANG" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="104.0" prefWidth="105.0">
+                     <children>
+                        <Region prefHeight="3.0" prefWidth="97.0" />
+                        <Region prefHeight="51.0" prefWidth="97.0" />
+                        <Label fx:id="lblCari" alignment="CENTER" onMouseClicked="#onCariTiket" onMouseEntered="#onEntered" onMouseExited="#onExited" prefHeight="40.0" prefWidth="97.0" text="Cari Bus" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="104.0" prefWidth="105.0">
+                     <children>
+                        <Region prefHeight="3.0" prefWidth="97.0" />
+                        <Region prefHeight="51.0" prefWidth="104.0" />
+                        <Label fx:id="lblBatal" onMouseClicked="#onBatal" onMouseEntered="#onBatalEntered" onMouseExited="#onBatalExited" prefHeight="40.0" prefWidth="97.0" text="Batal" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </HBox>
+            <AnchorPane layoutX="4.0" layoutY="139.0" prefHeight="786.0" prefWidth="1248.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #2240E6;">
+               <children>
+                  <ScrollPane layoutX="11.0" layoutY="60.0" prefHeight="720.0" prefWidth="1225.0">
+                     <content>
+                        <VBox fx:id="vbTiket" prefHeight="179.0" prefWidth="1204.0" spacing="10.0" />
+                     </content>
+                  </ScrollPane>
+                  <HBox layoutX="-2.0" layoutY="-1.0" prefHeight="54.0" prefWidth="1244.0">
+                     <children>
+                        <Label fx:id="lblTotalRow" alignment="CENTER" prefHeight="73.0" prefWidth="207.0" text="0  Tiket Ditemukan" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="54.0" prefWidth="184.0" />
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="136.0" text="Keberangkatan" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Region layoutX="217.0" layoutY="10.0" prefHeight="54.0" prefWidth="28.0" />
+                        <Label alignment="CENTER" layoutX="417.0" layoutY="10.0" prefHeight="54.0" prefWidth="67.0" text="Jarak" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Region layoutX="544.0" layoutY="10.0" prefHeight="54.0" prefWidth="11.0" />
+                        <Label alignment="CENTER" layoutX="417.0" layoutY="10.0" prefHeight="54.0" prefWidth="126.0" text="Kedatangan" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Region layoutX="544.0" layoutY="10.0" prefHeight="54.0" prefWidth="88.0" />
+                        <Label alignment="CENTER" layoutX="555.0" layoutY="10.0" prefHeight="54.0" prefWidth="190.0" text="Harga" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Region layoutX="622.0" layoutY="10.0" prefHeight="54.0" prefWidth="32.0" />
+                        <Label alignment="CENTER" layoutX="555.0" layoutY="10.0" prefHeight="54.0" prefWidth="143.0" text="Tiket Tersedia" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <VBox layoutX="1257.0" layoutY="2.0" prefHeight="924.0" prefWidth="305.0" style="-fx-border-color: black; -fx-background-color: #2240E6;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="327.0" style="-fx-text-fill: white; -fx-border-color: black; -fx-border-width: 3;" text="Tiket">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane prefHeight="341.0" prefWidth="303.0" style="-fx-border-color: black;">
+                     <content>
+                        <VBox fx:id="vbSelectedTiket" prefHeight="73.0" prefWidth="300.0" spacing="5.0" />
+                     </content>
+                  </ScrollPane>
+                  <VBox prefHeight="88.0" prefWidth="305.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="305.0" text="Total" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="54.0" prefWidth="305.0">
+                           <children>
+                              <Label fx:id="lblTotal" alignment="CENTER" prefHeight="50.0" prefWidth="307.0" text="00000.00000" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="455.0" prefWidth="305.0" style="-fx-border-color: black;">
+                     <children>
+                        <Label text="Nama *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textNama" prefHeight="47.0" prefWidth="303.0" promptText="Maksimal Karakter 50">
+                           <font>
+                              <Font size="22.0" />
+                           </font></TextField>
+                        <Label text="Nomor Telepon *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textNoTelepon" prefHeight="47.0" prefWidth="303.0" promptText="13 Digit Angka cth * 0897">
+                           <font>
+                              <Font size="21.0" />
+                           </font></TextField>
+                        <Label text="Alamat *" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="textAlamat" prefHeight="175.0" prefWidth="303.0" promptText="Maksimal Karakter 50">
+                           <font>
+                              <Font size="21.0" />
+                           </font></TextArea>
+                        <Region prefHeight="15.0" prefWidth="303.0" />
+                        <HBox prefHeight="48.0" prefWidth="303.0">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                              <Button fx:id="btnBatal" mnemonicParsing="false" onAction="#onBtnBatal" prefHeight="44.0" prefWidth="304.0" style="-fx-text-fill: white; -fx-background-radius: 15; -fx-background-color: #f52727;" text="Batal">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Region layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" />
+                              <Button fx:id="btnSimpan" layoutX="76.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBtnSimpan" prefHeight="44.0" prefWidth="304.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-text-fill: #2240E6;" styleClass="fancy-button" stylesheets="@../../../../style/Style.css" text="Simpan">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

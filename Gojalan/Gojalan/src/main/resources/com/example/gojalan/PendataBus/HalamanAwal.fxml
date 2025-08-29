@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="932.0" prefWidth="1593.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanAwal.HalamanAwalPendataanControler">
+   <children>
+      <PieChart fx:id="Top5Rute" layoutX="142.0" layoutY="425.0" legendVisible="false" prefHeight="400.0" prefWidth="585.0" style="-fx-pie-color: #3498db;" title="Top 5 Rute Tiket" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="292.0" layoutX="144.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="577.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="154.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="558.0" />
+      <Label layoutX="186.0" layoutY="97.0" prefHeight="80.0" prefWidth="297.0" text="Kursi">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbKursi" layoutX="186.0" layoutY="159.0" prefHeight="80.0" prefWidth="297.0" text="10">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="513.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/Kursi%20(2).png" />
+         </image>
+      </ImageView>
+      <PieChart fx:id="Top5Bus" layoutX="873.0" layoutY="432.0" legendVisible="false" prefHeight="400.0" prefWidth="597.0" style="-fx-pie-color: #3498db;" title="Top 5 Bus Tiket" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="292.0" layoutX="874.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="577.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="272.0" layoutX="883.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="558.0" />
+      <Label layoutX="916.0" layoutY="105.0" prefHeight="80.0" prefWidth="297.0" text="Kursi">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbBus" layoutX="916.0" layoutY="167.0" prefHeight="80.0" prefWidth="297.0" text="10">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1243.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Images/Bus.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

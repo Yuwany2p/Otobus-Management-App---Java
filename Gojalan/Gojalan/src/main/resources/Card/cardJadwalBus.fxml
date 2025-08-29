@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="184.0" prefWidth="1509.0" style="-fx-border-width: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Jadwal.cardJadwalBusController">
+   <children>
+      <Label fx:id="lblNo" alignment="CENTER" prefHeight="174.0" prefWidth="0.0" text="Label">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNomorPolisi" alignment="CENTER" prefHeight="174.0" prefWidth="619.0" text="Nomor Polisi">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Region prefHeight="174.0" prefWidth="202.0" />
+      <VBox prefHeight="174.0" prefWidth="688.0">
+         <children>
+            <Label fx:id="lblTanggal" alignment="CENTER" prefHeight="90.0" prefWidth="900.0" text="Tanggal Berangkat">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblAsal" alignment="CENTER" prefHeight="206.0" prefWidth="868.0" text="Asal">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTujuan" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="153.0" prefWidth="891.0" text="Tujuan">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
